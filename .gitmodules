@@ -1,0 +1,6 @@
+[submodule "vendor/AgentBench"]
+	path = vendor/AgentBench
+	url = https://github.com/THUDM/AgentBench.git
+[submodule "vendor/AgentRL"]
+	path = vendor/AgentRL
+	url = https://github.com/THUDM/AgentRL.git
