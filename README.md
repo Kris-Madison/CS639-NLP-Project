@@ -1,13 +1,13 @@
 # CS639 NLP Project
 
-**Team 3**: Kris Yang, Skylar Hou, Xinyu Jessica Wang, Handan Hu, Linxiang Jin
-
-Replicating and analyzing long-horizon OS task failures using [AgentBench](https://github.com/THUDM/AgentBench) + [AgentRL](https://github.com/THUDM/AgentRL).
+\*\*Team 3: Kris Yang, Skylar Hou, Xinyu Jessica Wang, Handan Hu, Linxiang Jin
 
 ## Project Goals
 
+Replicating and analyzing long-horizon OS task failures using [AgentBench](https://github.com/THUDM/AgentBench) + [AgentRL](https://github.com/THUDM/AgentRL).
+
 - Replicate AgentBench OS task results with multiple models
-- Categorize execution traces into failure modes (per the HORIZON taxonomy)
+- Categorize execution traces into failure modes (using HORIZON taxonomy)
 - Analyze where and why agents fail on long-horizon OS tasks
 
 ## Prerequisites
