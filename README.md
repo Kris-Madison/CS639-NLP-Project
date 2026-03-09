@@ -1,6 +1,6 @@
 # CS639 NLP Project
 
-\*\*Team 3: Kris Yang, Skylar Hou, Xinyu Jessica Wang, Handan Hu, Linxiang Jin
+Team 3: Kris Yang, Skylar Hou, Xinyu Jessica Wang, Handan Hu, Linxiang Jin
 
 ## Project Goals
 
