@@ -63,4 +63,4 @@ log "Running services:"
 docker compose -f "$COMPOSE_FILE" ps
 
 log ""
-log "To stop:              bash scripts/start_env.sh --down"ls
+log "To stop:              bash scripts/start_env.sh --down"
