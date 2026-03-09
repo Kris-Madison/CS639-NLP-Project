@@ -4,11 +4,11 @@
 #
 # Usage:
 #   bash scripts/run_eval.sh                          # defaults: gpt-5-mini, os-std
-#   bash scripts/run_eval.sh -m gpt-4o -t os-dev -j 16
+#   bash scripts/run_eval.sh -m gpt-4o --task os-dev -j 16
 #   bash scripts/run_eval.sh --resume results/os-std-run1.jsonl
 #
 # Any extra flags are forwarded directly to server_agent.py, e.g.:
-#   bash scripts/run_eval.sh -n 2 --temp 0.0 -v --range 0,20
+#   bash scripts/run_eval.sh -n 2 -t 0.0 -v --range 0,20
 #
 # See vendor/AgentRL/examples/eval/server_agent.py --help for all options.
 # Supported tasks: os-std, os-dev
@@ -41,7 +41,7 @@ while [[ $# -gt 0 ]]; do
     case $1 in
         -m|--model)      MODEL="$2";       shift 2 ;;
         -u|--url)        BASE_URL="$2";    shift 2 ;;
-        -t|--task)       TASK="$2";        shift 2 ;;
+           --task)         TASK="$2";        shift 2 ;;
         -j|--jobs)       JOBS="$2";        shift 2 ;;
         -c|--controller) CONTROLLER="$2";  shift 2 ;;
         --resume)        RESUME_FILE="$2"; shift 2 ;;
