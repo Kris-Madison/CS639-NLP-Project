@@ -39,16 +39,14 @@ if command -v conda >/dev/null 2>&1; then
     if conda env list | grep -q "^agent-bench "; then
         warn "conda env 'agent-bench' already exists, skipping creation."
     else
-        log "Creating conda env 'agent-bench' with Python 3.9..."
-        conda create -n agent-bench python=3.9 -y
+        log "Creating conda env 'agent-bench' with Python 3.12..."
+        conda create -n agent-bench python=3.12 -y
     fi
-    log "Installing AgentBench Python requirements..."
-    conda run -n agent-bench pip install -r vendor/AgentBench/requirements.txt
     log "Installing AgentRL eval script dependencies..."
     conda run -n agent-bench pip install pandas aiohttp openai tqdm
 else
     warn "conda not available — installing into current Python env"
-    pip install -r vendor/AgentBench/requirements.txt
+    pip install pandas aiohttp openai tqdm
 fi
 
 # ---------------------------------------------------------------------------
@@ -81,7 +79,7 @@ log "Next steps:"
 log "  1. Activate the conda env:        conda activate agent-bench"
 log "  2. Copy .env.example → .env and add your API key"
 log "  3. Start the environment stack:   bash scripts/start_env.sh"
-log "  4. Run evaluation:                bash scripts/run_eval.sh [-m gpt-5-mini] [-t os-std] [-j 8]"
+log "  4. Run evaluation:                bash scripts/run_eval.sh [-m gpt-5-mini] [--task os-std] [-j 8]"
 log ""
 log "⚠️  Always run 'conda activate agent-bench' before using any scripts."
 log ""
