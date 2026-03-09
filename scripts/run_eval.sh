@@ -3,7 +3,7 @@
 # scripts/run_eval.sh — Run AgentBench OS evaluation via AgentRL
 #
 # Usage:
-#   bash scripts/run_eval.sh                          # defaults: gpt-4o-mini, os-std
+#   bash scripts/run_eval.sh                          # defaults: gpt-5-mini, os-std
 #   bash scripts/run_eval.sh -m claude-sonnet-4-... \
 #                            -t os-std -j 8
 #   bash scripts/run_eval.sh --resume results/os-std-run1.jsonl
@@ -20,7 +20,7 @@ die()  { echo -e "${RED}[error]${NC} $*"; exit 1; }
 # ---------------------------------------------------------------------------
 # Defaults (override via flags or .env)
 # ---------------------------------------------------------------------------
-MODEL="${MODEL:-gpt-4o-mini}"
+MODEL="${MODEL:-gpt-5-mini}"
 BASE_URL="${BASE_URL:-https://api.openai.com/v1}"
 TASK="${TASK:-os-std}"
 JOBS="${JOBS:-8}"          # concurrent sessions
@@ -75,9 +75,6 @@ fi
 # ---------------------------------------------------------------------------
 # Build output path
 # ---------------------------------------------------------------------------
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-SAFE_MODEL=$(echo "$MODEL" | tr '/:' '--')
-OUTFILE="results/${TASK}-${SAFE_MODEL}-${TIMESTAMP}.jsonl"
 mkdir -p results
 
 # ---------------------------------------------------------------------------
@@ -88,7 +85,7 @@ log "  Task:        $TASK"
 log "  Model:       $MODEL"
 log "  Base URL:    $BASE_URL"
 log "  Parallelism: $JOBS"
-log "  Output:      $OUTFILE"
+log "  Output dir:  results/"
 [[ -n "$RESUME_FILE" ]] && log "  Resuming:    $RESUME_FILE"
 log ""
 
@@ -100,12 +97,12 @@ python vendor/AgentRL/examples/eval/server_agent.py \
     -u  "$BASE_URL" \
     -j  "$JOBS" \
     -c  "$CONTROLLER" \
-    -o  "$OUTFILE" \
+    -o  "results" \
     ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"} \
     "$TASK"
 
 log ""
-log "✅  Evaluation complete. Results saved to: $OUTFILE"
+log "✅  Evaluation complete. Results saved under: results/"
 log ""
 log "To check stats, run:"
-log "  bash scripts/check_results.sh $OUTFILE"
+log "  bash scripts/check_results.sh results/<output-file>.jsonl"
