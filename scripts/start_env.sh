@@ -41,19 +41,26 @@ fi
 
 log ""
 log "Waiting for controller to be ready on :5020..."
-for i in $(seq 1 30); do
+READY=false
+for i in $(seq 1 10); do
     if curl -s http://localhost:5020/api >/dev/null 2>&1; then
-        log "✅  Controller is up at http://localhost:5020"
+        READY=true
         break
     fi
     echo -n "."
     sleep 2
 done
+echo ""
+if ! $READY; then
+    warn "Controller did not respond. Check logs with:"
+    warn "  docker compose -f $COMPOSE_FILE logs controller"
+else
+    log "✅  Controller is up at http://localhost:5020"
+fi
 
 log ""
 log "Running services:"
 docker compose -f "$COMPOSE_FILE" ps
 
 log ""
-log "Controller dashboard: http://127.0.0.1:5020"
-log "To stop:              bash scripts/start_env.sh --down"
+log "To stop:              bash scripts/start_env.sh --down"ls
