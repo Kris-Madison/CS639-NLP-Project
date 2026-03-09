@@ -10,7 +10,7 @@ log()  { echo -e "${GREEN}[env]${NC} $*"; }
 warn() { echo -e "${YELLOW}[warn]${NC} $*"; }
 
 COMPOSE_FILE="vendor/AgentBench/extra/docker-compose.yml"
-OS_ONLY=false
+OS_ONLY=true
 BRING_DOWN=false
 
 for arg in "$@"; do
@@ -42,8 +42,8 @@ fi
 log ""
 log "Waiting for controller to be ready on :5020..."
 for i in $(seq 1 30); do
-    if curl -s http://127.0.0.1:5020/api >/dev/null 2>&1; then
-        log "✅  Controller is up at http://127.0.0.1:5020"
+    if curl -s http://localhost:5020/api >/dev/null 2>&1; then
+        log "✅  Controller is up at http://localhost:5020"
         break
     fi
     echo -n "."

@@ -24,7 +24,7 @@ MODEL="${MODEL:-gpt-4o-mini}"
 BASE_URL="${BASE_URL:-https://api.openai.com/v1}"
 TASK="${TASK:-os-std}"
 JOBS="${JOBS:-8}"          # concurrent sessions
-CONTROLLER="${CONTROLLER:-http://127.0.0.1:5020/api}"
+CONTROLLER="${CONTROLLER:-http://localhost:5020/api}"
 RESUME_FILE=""
 
 # Load .env if present
