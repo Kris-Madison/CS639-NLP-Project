@@ -14,7 +14,7 @@ if [[ "${CONDA_DEFAULT_ENV:-}" != "agent-bench" ]]; then
     exit 1
 fi
 
-CHECK_SCRIPT="vendor/AgentRL/examples/evaluation/check.py"
+CHECK_SCRIPT="vendor/AgentRL/examples/eval/check.py"
 
 if [[ $# -eq 1 ]]; then
     log "Checking: $1"
