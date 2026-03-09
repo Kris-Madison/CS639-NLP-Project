@@ -1,0 +1,14 @@
+# Secrets
+.env
+
+# Results / outputs (track with git-lfs if needed)
+results/*.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# OS
+.DS_Store
