@@ -4,10 +4,13 @@
 #
 # Usage:
 #   bash scripts/run_eval.sh                          # defaults: gpt-5-mini, os-std
-#   bash scripts/run_eval.sh -m claude-sonnet-4-... \
-#                            -t os-std -j 8
+#   bash scripts/run_eval.sh -m gpt-4o -t os-dev -j 16
 #   bash scripts/run_eval.sh --resume results/os-std-run1.jsonl
 #
+# Any extra flags are forwarded directly to server_agent.py, e.g.:
+#   bash scripts/run_eval.sh -n 2 --temp 0.0 -v --range 0,20
+#
+# See vendor/AgentRL/examples/eval/server_agent.py --help for all options.
 # Supported tasks: os-std, os-dev
 # =============================================================================
 set -euo pipefail
@@ -26,22 +29,23 @@ TASK="${TASK:-os-std}"
 JOBS="${JOBS:-8}"          # concurrent sessions
 CONTROLLER="${CONTROLLER:-http://localhost:5020/api}"
 RESUME_FILE=""
+PASSTHROUGH=()
 
 # Load .env if present
 [[ -f .env ]] && export $(grep -v '^#' .env | xargs)
 
 # ---------------------------------------------------------------------------
-# Parse flags
+# Parse flags — known flags set shell vars; everything else is forwarded
 # ---------------------------------------------------------------------------
 while [[ $# -gt 0 ]]; do
     case $1 in
-        -m|--model)    MODEL="$2";      shift 2 ;;
-        -u|--url)      BASE_URL="$2";   shift 2 ;;
-        -t|--task)     TASK="$2";       shift 2 ;;
-        -j|--jobs)     JOBS="$2";       shift 2 ;;
-        -c|--controller) CONTROLLER="$2"; shift 2 ;;
-        --resume)      RESUME_FILE="$2"; shift 2 ;;
-        *) die "Unknown argument: $1" ;;
+        -m|--model)      MODEL="$2";       shift 2 ;;
+        -u|--url)        BASE_URL="$2";    shift 2 ;;
+        -t|--task)       TASK="$2";        shift 2 ;;
+        -j|--jobs)       JOBS="$2";        shift 2 ;;
+        -c|--controller) CONTROLLER="$2";  shift 2 ;;
+        --resume)        RESUME_FILE="$2"; shift 2 ;;
+        *)               PASSTHROUGH+=("$1"); shift ;;
     esac
 done
 
@@ -90,7 +94,7 @@ log "  Output dir:  results/"
 log ""
 
 EXTRA_ARGS=()
-[[ -n "$RESUME_FILE" ]] && EXTRA_ARGS+=(--file "$RESUME_FILE")
+[[ -n "$RESUME_FILE" ]] && EXTRA_ARGS+=(--output-file "$RESUME_FILE")
 
 python vendor/AgentRL/examples/eval/server_agent.py \
     -m  "$MODEL" \
@@ -99,6 +103,7 @@ python vendor/AgentRL/examples/eval/server_agent.py \
     -c  "$CONTROLLER" \
     -o  "results" \
     ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"} \
+    ${PASSTHROUGH[@]+"${PASSTHROUGH[@]}"} \
     "$TASK"
 
 log ""
