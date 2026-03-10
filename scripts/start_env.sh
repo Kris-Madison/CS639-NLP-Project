@@ -39,6 +39,36 @@ else
     docker compose -f "$COMPOSE_FILE" up -d
 fi
 
+# ---------------------------------------------------------------------------
+# Fix: pin aiodocker==0.21.0 inside the OS task worker container
+#
+# aiodocker 0.22.0+ changed timeout handling to require aiohttp.ClientTimeout
+# objects, but agentrl-worker passes plain ints, causing:
+#   AttributeError: 'int' object has no attribute 'connect'
+# This patch is applied every time the container starts since containers
+# are ephemeral and don't persist pip installs across restarts.
+# ---------------------------------------------------------------------------
+log ""
+log "Applying aiodocker fix in OS task worker..."
+# Wait for the container to be running before exec-ing into it
+for i in $(seq 1 15); do
+    WORKER_CONTAINER=$(docker ps --filter "ancestor=agentbench-fc-os_interaction-std" --format "{{.Names}}" | head -1)
+    # Also try filtering by image name pattern in case naming differs
+    [[ -z "$WORKER_CONTAINER" ]] && \
+        WORKER_CONTAINER=$(docker ps --format "{{.Names}}" | grep -i "os_interaction\|os-interaction" | head -1)
+    [[ -n "$WORKER_CONTAINER" ]] && break
+    echo -n "."
+    sleep 1
+done
+
+if [[ -n "$WORKER_CONTAINER" ]]; then
+    docker exec "$WORKER_CONTAINER" pip install -q "aiodocker==0.21.0"
+    log "✅  aiodocker pinned to 0.21.0 in $WORKER_CONTAINER"
+else
+    warn "Could not find OS task worker container to patch — aiodocker fix not applied."
+    warn "If tasks fail, run manually: docker exec <container> pip install 'aiodocker==0.21.0'"
+fi
+
 log ""
 log "Waiting for controller to be ready on :5020..."
 READY=false
