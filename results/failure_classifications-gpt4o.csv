@@ -1,0 +1,96 @@
+task_index,classification_type
+0,Instruction Error
+1,Instruction Error
+2,Instruction Error
+3,Instruction Error
+4,Instruction Error
+5,Instruction Error
+6,Environment Disturbance / Unable to Detect Change
+8,Environment Disturbance / Unable to Detect Change
+9,False Assumptions
+10,False Assumptions
+11,Instruction Error
+17,Environment Disturbance / Unable to Detect Change
+18,Instruction Error
+23,Instruction Error
+24,Environment Disturbance / Unable to Detect Change
+25,Environment Disturbance / Unable to Detect Change
+34,Instruction Error
+35,Instruction Error
+36,Environment Disturbance / Unable to Detect Change
+37,Instruction Error
+38,Instruction Error
+39,Instruction Error
+40,Instruction Error
+44,Environment Disturbance / Unable to Detect Change
+47,Environment Disturbance / Unable to Detect Change
+48,Environment Disturbance / Unable to Detect Change
+49,Environment Disturbance / Unable to Detect Change
+50,Environment Disturbance / Unable to Detect Change
+52,Instruction Error
+53,Instruction Error
+54,Environment Disturbance / Unable to Detect Change
+55,Environment Disturbance / Unable to Detect Change
+56,Instruction Error
+58,Instruction Error
+59,Instruction Error
+60,Instruction Error
+61,Environment Disturbance / Unable to Detect Change
+62,Instruction Error
+63,Instruction Error
+64,Environment Disturbance / Unable to Detect Change
+65,Instruction Error
+66,Instruction Error
+67,Environment Disturbance / Unable to Detect Change
+68,Instruction Error
+69,Environment Disturbance / Unable to Detect Change
+70,Instruction Error
+71,Instruction Error
+72,Instruction Error
+73,Environment Disturbance / Unable to Detect Change
+74,Environment Disturbance / Unable to Detect Change
+75,Environment Disturbance / Unable to Detect Change
+77,Environment Disturbance / Unable to Detect Change
+79,Environment Disturbance / Unable to Detect Change
+80,Environment Disturbance / Unable to Detect Change
+81,Environment Disturbance / Unable to Detect Change
+82,Instruction Error
+83,Environment Disturbance / Unable to Detect Change
+84,Environment Disturbance / Unable to Detect Change
+85,Environment Disturbance / Unable to Detect Change
+86,Instruction Error
+87,Instruction Error
+88,Environment Disturbance / Unable to Detect Change
+91,Instruction Error
+92,Instruction Error
+94,Environment Disturbance / Unable to Detect Change
+96,Environment Disturbance / Unable to Detect Change
+98,Instruction Error
+99,Instruction Error
+100,Instruction Error
+105,Instruction Error
+112,Instruction Error
+113,Environment Disturbance / Unable to Detect Change
+115,Planning Errors (Sub-plan & Action)
+116,Instruction Error
+117,Environment Disturbance / Unable to Detect Change
+118,Instruction Error
+121,Instruction Error
+123,Instruction Error
+124,Instruction Error
+125,Instruction Error
+126,Instruction Error
+127,Instruction Error
+128,Instruction Error
+129,Environment Disturbance / Unable to Detect Change
+130,Instruction Error
+131,Instruction Error
+132,Environment Disturbance / Unable to Detect Change
+133,Instruction Error
+134,Instruction Error
+137,Instruction Error
+139,Instruction Error
+140,Instruction Error
+141,Instruction Error
+142,Instruction Error
+143,Instruction Error

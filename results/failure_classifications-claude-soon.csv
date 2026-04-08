@@ -1,0 +1,82 @@
+task_index,classification_type
+4,False Assumptions
+5,False Assumptions
+6,False Assumptions
+18,False Assumptions
+30,Instruction Error
+33,Planning Errors (Sub-plan & Action)
+35,False Assumptions
+36,Environment Disturbance / Unable to Detect Change
+37,Instruction Error
+38,Environment Disturbance / Unable to Detect Change
+39,Instruction Error
+40,Instruction Error
+41,Environment Disturbance / Unable to Detect Change
+47,Environment Disturbance / Unable to Detect Change
+48,Environment Disturbance / Unable to Detect Change
+49,Environment Disturbance / Unable to Detect Change
+52,False Assumptions
+53,Instruction Error
+54,False Assumptions
+56,Environment Disturbance / Unable to Detect Change
+58,Instruction Error
+59,Instruction Error
+60,Instruction Error
+61,Instruction Error
+62,Instruction Error
+64,Environment Disturbance / Unable to Detect Change
+65,Instruction Error
+66,Instruction Error
+67,Environment Disturbance / Unable to Detect Change
+68,Instruction Error
+70,Instruction Error
+71,Instruction Error
+72,Planning Errors (Sub-plan & Action)
+74,Instruction Error
+75,Instruction Error
+76,Environment Disturbance / Unable to Detect Change
+77,Environment Disturbance / Unable to Detect Change
+79,Planning Errors (Sub-plan & Action)
+80,Instruction Error
+81,Environment Disturbance / Unable to Detect Change
+82,Instruction Error
+84,False Assumptions
+85,Instruction Error
+86,False Assumptions
+87,Instruction Error
+88,False Assumptions
+90,Environment Disturbance / Unable to Detect Change
+92,Environment Disturbance / Unable to Detect Change
+93,Instruction Error
+94,Environment Disturbance / Unable to Detect Change
+95,Instruction Error
+96,Environment Disturbance / Unable to Detect Change
+98,Instruction Error
+99,Instruction Error
+104,Instruction Error
+105,Instruction Error
+106,Instruction Error
+110,Instruction Error
+112,Instruction Error
+113,Planning Errors (Sub-plan & Action)
+115,Instruction Error
+116,Instruction Error
+117,Planning Errors (Sub-plan & Action)
+120,Instruction Error
+121,Instruction Error
+124,Instruction Error
+125,Instruction Error
+127,Instruction Error
+128,Instruction Error
+129,False Assumptions
+130,Instruction Error
+131,False Assumptions
+132,Environment Disturbance / Unable to Detect Change
+133,Instruction Error
+134,Instruction Error
+136,Instruction Error
+137,Instruction Error
+138,Planning Errors (Sub-plan & Action)
+139,Instruction Error
+140,Instruction Error
+143,Instruction Error
