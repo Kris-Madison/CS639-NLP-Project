@@ -1,0 +1,1 @@
+{"index": "aug-cf3-007-bootstrap-00014", "error": "AGENT_FAILED", "info": "'dict' object has no attribute 'type'", "output": {"index": null, "status": "running", "result": null, "history": null}, "time": {"timestamp": 1769616581032, "str": "2026-01-28 10:09:41"}}

@@ -1,0 +1,1 @@
+{"index": "aug-cf5-007-bootstrap-00023", "error": "AGENT_FAILED", "info": "[Errno 104] Connection reset by peer", "output": {"index": null, "status": "running", "result": null, "history": null}, "time": {"timestamp": 1769617122033, "str": "2026-01-28 10:18:42"}}
