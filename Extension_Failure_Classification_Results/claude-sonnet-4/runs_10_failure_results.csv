@@ -1,0 +1,38 @@
+task_index,classification_type
+aug-cf10-007-bootstrap-00023,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00022,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00019,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00020,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00016,History Error Accumulation
+aug-cf10-007-bootstrap-00014,Instruction Error
+aug-cf10-007-bootstrap-00013,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00011,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00021,History Error Accumulation
+aug-cf10-007-bootstrap-00009,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00007,History Error Accumulation
+aug-cf10-007-bootstrap-00010,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00008,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00003,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00001,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00002,History Error Accumulation
+aug-cf10-007-bootstrap-00018,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00004,History Error Accumulation
+aug-cf10-007-bootstrap-00017,Planning Errors (Sub-plan & Action)
+aug-cf10-004-Q30-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-004-N41-00002,Planning Errors (Sub-plan & Action)
+aug-cf10-004-N41-00003,Planning Errors (Sub-plan & Action)
+aug-cf10-006-new-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-004-N41-00001,Planning Errors (Sub-plan & Action)
+aug-cf10-004-Q19-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-004-N41-00000,History Error Accumulation
+aug-cf10-002-environment-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-003-ac-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-003-ac-00001,Planning Errors (Sub-plan & Action)
+aug-cf10-001-stock-00000,Planning Errors (Sub-plan & Action)
+aug-cf10-001-stock-00001,Planning Errors (Sub-plan & Action)
+aug-cf10-005-new-00001,Planning Errors (Sub-plan & Action)
+aug-cf10-004-Q49-00000,False Assumptions
+aug-cf10-003-ac-00003,Planning Errors (Sub-plan & Action)
+aug-cf10-007-bootstrap-00015,History Error Accumulation
+aug-cf10-003-ac-00002,History Error Accumulation
+aug-cf10-005-new-00000,History Error Accumulation

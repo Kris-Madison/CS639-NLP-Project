@@ -1,0 +1,32 @@
+task_index,classification_type
+aug-cf4-007-bootstrap-00023,Instruction Error
+aug-cf4-007-bootstrap-00022,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00021,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00015,History Error Accumulation
+aug-cf4-007-bootstrap-00012,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00010,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00006,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00009,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00018,False Assumptions
+aug-cf4-007-bootstrap-00004,Instruction Error
+aug-cf4-005-new-00003,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00020,Instruction Error
+aug-cf4-007-bootstrap-00002,Planning Errors (Sub-plan & Action)
+aug-cf4-005-new-00004,History Error Accumulation
+aug-cf4-007-bootstrap-00003,Planning Errors (Sub-plan & Action)
+aug-cf4-004-Q30-00000,Planning Errors (Sub-plan & Action)
+aug-cf4-005-new-00001,Planning Errors (Sub-plan & Action)
+aug-cf4-007-bootstrap-00005,History Error Accumulation
+aug-cf4-006-new-00000,Planning Errors (Sub-plan & Action)
+aug-cf4-006-new-00001,Instruction Error
+aug-cf4-007-bootstrap-00017,Instruction Error
+aug-cf4-007-bootstrap-00007,Instruction Error
+aug-cf4-001-stock-00000,Instruction Error
+aug-cf4-003-ac-00002,Planning Errors (Sub-plan & Action)
+aug-cf4-005-new-00002,False Assumptions
+aug-cf4-001-stock-00001,History Error Accumulation
+aug-cf4-002-environment-00000,Planning Errors (Sub-plan & Action)
+aug-cf4-003-ac-00000,Planning Errors (Sub-plan & Action)
+aug-cf4-004-Q49-00000,False Assumptions
+aug-cf4-005-new-00000,Instruction Error
+aug-cf4-004-Q19-00000,False Assumptions
